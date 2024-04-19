@@ -12,7 +12,7 @@ var SinhVien = (function () {
       return (this.toan + this.ly + this.hoa) / 3;
     };
     this.isValid = function () {
-      return this._errors.length === 0 ? true : false;
+      return this._errors.length === 0;
     };
   }
 
@@ -159,18 +159,15 @@ var SinhVien = (function () {
   });
 
   function isScoreValid(score) {
-    if (score < 0 || score > 10) return false;
-    return true;
+    return score >= 0 && score <= 10;
   }
 
   function isNotBlank(val) {
-    return String(val).length > 0 ? true : false;
+    return String(val).length > 0;
   }
 
   function isInRange(val, min, max) {
-    return String(val).length >= min && String(val).length <= max
-      ? true
-      : false;
+    return String(val).length >= min && String(val).length <= max;
   }
 
   function isValidEmail(email) {

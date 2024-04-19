@@ -164,13 +164,13 @@ var SinhVien = (function () {
   }
 
   function isNotBlank(val) {
-    if (typeof val == "number") val = val.toString();
-    return val.length > 0 ? true : false;
+    return String(val).length > 0 ? true : false;
   }
 
   function isInRange(val, min, max) {
-    if (typeof val !== "string") val = val.toString();
-    return val.length >= min && val.length <= max ? true : false;
+    return String(val).length >= min && String(val).length <= max
+      ? true
+      : false;
   }
 
   function isValidEmail(email) {

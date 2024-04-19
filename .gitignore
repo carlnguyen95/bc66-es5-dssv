@@ -1,0 +1,5 @@
+#unnecessary folders
+.nyc_output
+coverage
+.vscode
+EmployeeManagement/node_modules
